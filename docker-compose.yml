@@ -5,8 +5,6 @@ services:
       - 2376:2376
     volumes:
       - jenkins-docker-certs:/certs/client
-      - jenkins-data:/var/jenkins_home
-    environment:
       - DOCKER_TLS_CERTDIR=/certs
     privileged: true
     networks:

@@ -11,6 +11,12 @@ pipeline {
             }
 
             steps {
+                sh '''
+                cd client
+                npm install
+                npm build
+                ls
+                '''
                 sh 'ls'
             }
         }
