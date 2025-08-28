@@ -14,7 +14,7 @@ pipeline {
                 sh '''
                 cd client
                 npm install
-                npm build
+                npm run build
                 ls
                 '''
                 sh 'ls'
@@ -23,6 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'ls'
             }
         }
         stage('Deploy') {
